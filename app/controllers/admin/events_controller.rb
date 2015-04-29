@@ -176,7 +176,7 @@ module Admin
       @event
     end
 
-    def update_state(transition, notice, mail = false, subject = false, send_mail = false)
+    def update_state(transition, error, notice, mail = false, subject = false, send_mail = false)
       alert = @event.update_state(transition, mail, subject, send_mail, params[:send_mail].blank?)
 
       if !alert.blank?
